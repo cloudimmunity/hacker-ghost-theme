@@ -1,0 +1,78 @@
+{{!< default}}
+
+{{#post}}
+
+<header id="main-header">
+	<nav id="main-nav">
+		<a class="js-ajax-link js-show-index" id="home-link" href="{{@blog.url}}"><i class="fa fa-angle-left"></i></a>
+		{{#if @blog.logo}}
+			<a class="js-ajax-link js-show-index" id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+		{{/if}}
+	</nav>
+</header>
+
+<main class="content" role="main">
+	<article class="{{post_class}}">
+		<div class="inner">
+
+			<header class="post-header">
+				<span class="post-meta">{{author}} {{tags prefix=" | " separator=", "}} </span>
+				<div class="clear"></div>
+				<h1 class="post-title">{{{title}}}</h1>
+			</header>
+		
+			<section class="post-content">
+				{{content}}
+			</section>
+			
+			<footer class="post-footer">
+				<div class="post-meta">
+					{{tags separator=", "}}
+				</div>
+				<div class="post-share">
+                    <a class="fa fa-reddit" href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false;" target="_blank">
+						<span class="hidden">Reddit</span>
+					</a>
+                    
+                    <a class="fa fa-hacker-news" href="javascript:window.location=%22http://news.ycombinator.com/submitlink?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)" target="_blank">
+                        <span class="hidden">Hacker News</span>
+                    </a>
+                    
+					<a class="fa fa-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" target="_blank">
+						<span class="hidden">Twitter</span>
+					</a>
+                    
+                    <a class="fa fa-rss" href="http://localhost:2368/rss/" target="_blank">
+						<span class="hidden">RSS</span>
+					</a>
+				</div>
+				<div class="clear"></div>
+			</footer>
+			
+			{{#author}}
+			<aside class="post-author">
+				{{#if image}}
+					<figure class="post-author-avatar">
+						<img src="{{image}}" alt="{{name}}" />
+					</figure>
+				{{/if}}
+				<div class="post-author-bio">
+					<h4><a class="js-author-index js-ajax-link" href="{{url}}">{{name}}</a></h4>
+					{{#if bio}}
+						<p>{{{bio}}}</p>
+					{{/if}}
+					{{#if location}}
+						<span><i class="fa fa-link"></i> <a href="{{location}}">Twitter</a></span>
+					{{/if}}
+					{{#if website}}
+						<span><i class="fa fa-link"></i> <a href="{{website}}">LinkedIn</a></span>
+					{{/if}}
+				</div>
+				<div class="clear"></div>
+			</aside>
+			{{/author}}
+			
+			{{/post}}
+		</div>
+	</article>
+</main>

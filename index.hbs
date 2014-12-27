@@ -1,0 +1,25 @@
+{{!< default}}
+
+<header id="main-header">
+	<nav id="main-nav">
+    {{#if @blog.logo}}
+			<a class="js-ajax-link js-show-index" id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+		{{/if}}
+	</nav>
+	<div class="inner">
+		<h1 class="page-title"><a class="js-ajax-link js-show-index" id="page-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+	</div>
+	{{#if @blog.cover}}
+		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
+	{{/if}}
+</header>
+
+<div id="post-index" class="container">
+
+	<main class="content post-index-animations" role="main">
+	
+		{{> "loop"}}
+	
+	</main>
+
+</div>
