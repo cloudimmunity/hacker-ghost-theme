@@ -697,7 +697,138 @@ img {
 	background-color: #efefef;
 }
 
+.subscribe-form {
+    margin: 1.5em 0;
+    padding: 6.5vw 7vw 8vw;
+    border: color(var(--lightgrey) l(+10%)) 1px solid;
+    text-align: center;
+    background: linear-gradient(color(var(--whitegrey) l(+6%)), color(var(--whitegrey) l(+4%)));
+    border-radius: 3px;
+}
 
+.subscribe-form-title {
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: var(--darkgrey);
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.subscribe-form-description {
+    margin-bottom: 0.2em 0 1em;
+    color: var(--midgrey);
+    font-size: 2.1rem;
+    line-height: 1.55em;
+}
+
+.subscribe-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 460px;
+}
+
+.subscribe-form .form-group {
+    align-self: stretch;
+    display: flex;
+}
+
+.subscribe-email {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: color(var(--lightgrey) l(+7%)) 1px solid;
+    color: var(--midgrey);
+    font-size: 1.8rem;
+    line-height: 1em;
+    font-weight: normal;
+    user-select: text;
+    border-radius: 5px;
+    transition: border-color 0.15s linear;
+
+    -webkit-appearance: none;
+}
+
+.subscribe-email:focus {
+    outline: 0;
+    border-color: color(var(--lightgrey) l(-2%));
+}
+
+.subscribe-form button {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    padding: 0 20px;
+    height: 43px;
+    outline: none;
+    color: rgb(109, 109, 109);
+    font-size: 1.5rem;
+    line-height: 39px;
+    font-weight: 400;
+    text-align: center;
+    background: linear-gradient(
+    color(var(--blue) whiteness(+7%)),
+    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--blue) lightness(-4%) saturation(-10%))
+    );
+    border-radius: 5px;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.subscribe-form button:active,
+.subscribe-form button:focus {
+    background: color(var(--blue) lightness(-9%) saturation(-10%));
+}
+
+.subscribe-form .button-loader,
+.subscribe-form .message-success,
+.subscribe-form .message-error {
+    display: none;
+}
+
+.subscribe-form .loading .button-content {
+    visibility: hidden;
+}
+
+.subscribe-form .loading .button-loader {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: inline-block;
+    margin-left: -19px;
+    transform: scale(0.7);
+}
+
+.subscribe-form .button-loader svg path,
+.subscribe-form .button-loader svg rect {
+    fill: #fff;
+}
+
+.subscribe-form .success .message-success,
+.subscribe-form .invalid .message-error,
+.subscribe-form .error .message-error {
+    margin: 1em auto 0;
+    max-width: 400px;
+    color: var(--red);
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.subscribe-form .success .message-success {
+    display: block;
+    color: color(var(--green) l(-5%));
+}
+
+.subscribe-form .invalid .message-error,
+.subscribe-form .error .message-error {
+    display: block;
+}
 /* ==========================================================================
    6. Media Queries - Smaller than 640px
    ========================================================================== */

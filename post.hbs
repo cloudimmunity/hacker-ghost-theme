@@ -48,8 +48,8 @@
 				</div>
 				<div class="clear"></div>
 			</footer>
-			
-			{{#author}}
+
+			{{#foreach authors}}
 			<aside class="post-author">
 				{{#if profile_image}}
 					<figure class="post-author-avatar">
@@ -70,7 +70,12 @@
 				</div>
 				<div class="clear"></div>
 			</aside>
-			{{/author}}
+			{{/foreach}}
+									
+			{{!-- Email subscribe form at the bottom of the page --}}
+			{{#if @labs.members}}
+				{{> subscribe-form}}
+			{{/if}}
 			
 			{{/post}}
 		</div>

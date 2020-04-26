@@ -21,4 +21,9 @@
 
 {{/foreach}}
 
+{{!-- Email subscribe form at the bottom of the page --}}
+{{#if @labs.members}}
+	{{> subscribe-form}}
+{{/if}}
+
 {{pagination}}
