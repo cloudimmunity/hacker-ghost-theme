@@ -283,7 +283,7 @@ img {
   background-color: rgba(255,255,255,0.8);
 	text-align: center;
 	z-index: 30;
-	padding: 128px 0;
+	padding: 64px 0;
   border-bottom: 1px solid rgba(0,0,0,0.04);
 
 	-webkit-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.666s;
@@ -487,7 +487,7 @@ img {
 
 .post {
 	position: relative;
-	padding: 64px 0;
+	padding: 32px 0;
 	z-index: 10;
 }
 #post-index {
@@ -499,7 +499,7 @@ img {
 
 #post-index .post:first-child {
 	border-top: 0;
-  padding-top: 403px;
+  padding-top: 230px;
 }
 
 .post-template .post {
